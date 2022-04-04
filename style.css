@@ -1,0 +1,16 @@
+:root {
+  --dark-color: #1c3738;
+  --light-color: #f6f930;
+  --neutral-color: #d7cdcc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Prata", serif;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: white;
+}
