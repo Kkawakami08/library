@@ -27,14 +27,15 @@ body {
   width: 100vw;
   position: fixed;
   z-index: 1;
-  /* visibility: hidden;
+  visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.3s linear; */
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 .newBookPrompt button {
   width: 30px;
   height: 30px;
+  color: white;
 }
 
 .newBookPrompt {

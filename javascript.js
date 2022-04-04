@@ -14,3 +14,9 @@ addBtn.addEventListener("click", (event) => {
   promptWindow.style.visibility = "visible";
   promptWindow.style.opacity = "1";
 });
+
+let exitBtn = document.getElementById("exit");
+exitBtn.addEventListener("click", (event) => {
+  promptWindow.style.visibility = "hidden";
+  promptWindow.style.opacity = "0";
+});
