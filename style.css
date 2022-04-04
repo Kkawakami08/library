@@ -8,11 +8,65 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Prata", serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background-color: var(--dark-color);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.promptBg {
+  background-color: #1c3738c5;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+}
+
+.newBookPrompt {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  white-space: nowrap;
+  background-color: var(--neutral-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border-radius: 20px;
+  gap: 20px;
+  color: var(--dark-color);
+  height: 300px;
+  width: 300px;
+}
+
+input {
+  display: block;
+}
+
+input[type="text"],
+input[type="number"] {
+  border-radius: 10px;
+  height: 50px;
+  width: 250px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  border: 0px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .header {
@@ -73,4 +127,6 @@ button:hover {
 
 .add img {
   width: 50px;
+  position: relative;
+  top: 3px;
 }

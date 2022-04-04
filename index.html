@@ -7,15 +7,31 @@
     <title>My Library</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap");
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="promptBg">
+        <div class="newBookPrompt">
+          <h2>ADD A BOOK</h2>
+          <form action="">
+            <input type="text" name="title" id="title" placeholder="TITLE" />
+
+            <input type="text" name="author" id="author" placeholder="AUTHOR" />
+
+            <input type="number" name="pages" id="pages" placeholder="PAGES" />
+            <div class="checkbox">
+              <label for="read">COMPLETED?</label>
+              <input type="checkbox" name="read" id="read" />
+            </div>
+          </form>
+        </div>
+      </div>
       <div class="header">
         <div class="libraryName">
-          <h1 class="name">Your</h1>
-          <h1>Library</h1>
+          <h1 class="name">YOUR</h1>
+          <h1>LIBRARY</h1>
         </div>
         <div class="headerBtn">
           <button title="Favorites">
