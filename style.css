@@ -27,9 +27,14 @@ body {
   width: 100vw;
   position: fixed;
   z-index: 1;
-  visibility: hidden;
+  /* visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.3s linear;
+  transition: visibility 0s, opacity 0.3s linear; */
+}
+
+.newBookPrompt button {
+  width: 30px;
+  height: 30px;
 }
 
 .newBookPrompt {
@@ -39,16 +44,25 @@ body {
   left: 50%;
   white-space: nowrap;
   background-color: var(--neutral-color);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
+  padding: 20px;
+  padding-bottom: 30px;
   border-radius: 20px;
-  gap: 20px;
+
   color: var(--dark-color);
-  height: 300px;
+  height: 350px;
   width: 300px;
+}
+
+.newBookPrompt button {
+  justify-self: start;
+}
+
+.newBookPrompt h2 {
+  margin-bottom: 30px;
 }
 
 input {
