@@ -2,7 +2,7 @@ let myLibrary = [];
 
 function Book(title, author, pages, read) {
   (this.title = title),
-    (this.autho = author),
+    (this.author = author),
     (this.pages = pages),
     (this.read = read);
 }
@@ -32,6 +32,7 @@ let title;
 let author;
 let pages;
 let read;
+let book;
 
 let addInfoBtn = document.getElementById("addInfo");
 addInfoBtn.addEventListener("click", (event) => {
@@ -39,5 +40,8 @@ addInfoBtn.addEventListener("click", (event) => {
   author = authorInput.value;
   pages = pagesInput.value;
   read = readInput.checked;
+  book = new Book(title, author, pages, read);
+  myLibrary.push(book);
   exit();
+  console.log(myLibrary);
 });
