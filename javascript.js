@@ -16,10 +16,12 @@ addBtn.addEventListener("click", (event) => {
 });
 
 let exitBtn = document.getElementById("exit");
-exitBtn.addEventListener("click", (event) => {
+exitBtn.addEventListener("click", exit);
+
+function exit(e) {
   promptWindow.style.visibility = "hidden";
   promptWindow.style.opacity = "0";
-});
+}
 
 let titleInput = document.getElementById("title");
 let authorInput = document.getElementById("author");
@@ -37,8 +39,5 @@ addInfoBtn.addEventListener("click", (event) => {
   author = authorInput.value;
   pages = pagesInput.value;
   read = readInput.checked;
-  console.log(title);
-  console.log(author);
-  console.log(pages);
-  console.log(read);
+  exit();
 });
