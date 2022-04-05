@@ -11,25 +11,25 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="promptBg" id="promptWindow">
-        <div class="newBookPrompt">
-          <button id="exit">x</button>
-          <h2>ADD A BOOK</h2>
-          <form action="">
-            <input type="text" name="title" id="title" placeholder="TITLE" />
+    <div class="promptBg" id="promptWindow">
+      <div class="newBookPrompt">
+        <button id="exit">x</button>
+        <h2>ADD A BOOK</h2>
+        <form action="">
+          <input type="text" name="title" id="title" placeholder="TITLE" />
 
-            <input type="text" name="author" id="author" placeholder="AUTHOR" />
+          <input type="text" name="author" id="author" placeholder="AUTHOR" />
 
-            <input type="number" name="pages" id="pages" placeholder="PAGES" />
-            <div class="checkbox">
-              <label for="read">COMPLETED?</label>
-              <input type="checkbox" name="read" id="read" />
-            </div>
-          </form>
-          <button id="addInfo">ADD</button>
-        </div>
+          <input type="number" name="pages" id="pages" placeholder="PAGES" />
+          <div class="checkbox">
+            <label for="read">COMPLETED?</label>
+            <input type="checkbox" name="read" id="read" />
+          </div>
+        </form>
+        <button id="addInfo">ADD</button>
       </div>
+    </div>
+    <div class="container">
       <div class="header">
         <div class="libraryName">
           <h1>LIBRARY</h1>
@@ -43,6 +43,22 @@
           </button>
         </div>
       </div>
+      <div id="main">
+        <div class="card">
+          <img
+            src="assets/book-cover.png"
+            alt="book cover"
+            class="bookCoverImg"
+          />
+          <div class="bookCoverText">
+            <h3>Harry Potter</h3>
+            <h4>JK ROWLING</h4>
+            <h4>256 Pages</h4>
+            <h4>Read toggle</h4>
+          </div>
+        </div>
+      </div>
+
       <div class="add">
         <button title="Add a Book" id="add">
           <img src="assets/plus-icon.png" alt="add book icon" />

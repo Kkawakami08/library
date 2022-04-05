@@ -154,3 +154,45 @@ button:hover {
   position: relative;
   top: 3px;
 }
+
+#main {
+  display: grid;
+
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+  grid-template-rows: repeat(auto-fit, 500px);
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+}
+
+.bookCoverImg {
+  height: 450px;
+}
+
+.bookCoverText {
+  position: absolute;
+  top: 70px;
+  left: 65px;
+  display: grid;
+  height: 300px;
+  grid-template-rows: 2fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.bookCoverText h3 {
+  color: white;
+  font-size: 2em;
+}
+
+.bookCoverText h4 {
+  align-self: end;
+}

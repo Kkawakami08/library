@@ -1,5 +1,8 @@
 let myLibrary = [];
 
+myLibrary[0] = new Book("Harry Potter", "JK Rowling", 256, true);
+console.log(myLibrary[0]);
+
 function Book(title, author, pages, read) {
   (this.title = title),
     (this.author = author),
