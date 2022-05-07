@@ -168,7 +168,7 @@ button:hover {
 
 .card {
   position: relative;
-  background-color: yellow;
+
   display: flex;
   justify-content: center;
 }
@@ -195,4 +195,5 @@ button:hover {
 
 .bookCoverText h4 {
   align-self: end;
+  color: var(--dark-color);
 }

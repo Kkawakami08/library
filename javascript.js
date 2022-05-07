@@ -1,6 +1,13 @@
 let myLibrary = [];
 
+function bookCard() {}
+
+let main = document.getElementById("main");
+
 myLibrary[0] = new Book("Harry Potter", "JK Rowling", 256, true);
+let card = document.createElement("div");
+main.appendChild(card);
+
 console.log(myLibrary[0]);
 
 function Book(title, author, pages, read) {

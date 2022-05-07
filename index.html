@@ -6,65 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap");
-    </style>
   </head>
   <body>
-    <div class="promptBg" id="promptWindow">
-      <div class="newBookPrompt">
-        <button id="exit">x</button>
-        <h2>ADD A BOOK</h2>
-        <form action="">
-          <input type="text" name="title" id="title" placeholder="TITLE" />
-
-          <input type="text" name="author" id="author" placeholder="AUTHOR" />
-
-          <input type="number" name="pages" id="pages" placeholder="PAGES" />
-          <div class="checkbox">
-            <label for="read">COMPLETED?</label>
-            <input type="checkbox" name="read" id="read" />
-          </div>
-        </form>
-        <button id="addInfo">ADD</button>
-      </div>
-    </div>
-    <div class="container">
-      <div class="header">
-        <div class="libraryName">
-          <h1>LIBRARY</h1>
-        </div>
-        <div class="headerBtn">
-          <button title="Favorites">
-            <img src="assets/star-icon.png" alt="favorites icon" />
-          </button>
-          <button title="Wishlist">
-            <img src="assets/heart-icon.png" alt="wishlist icon" id="heart" />
-          </button>
-        </div>
-      </div>
-      <div id="main">
-        <div class="card">
-          <img
-            src="assets/book-cover.png"
-            alt="book cover"
-            class="bookCoverImg"
-          />
-          <div class="bookCoverText">
-            <h3>Harry Potter</h3>
-            <h4>JK ROWLING</h4>
-            <h4>256 Pages</h4>
-            <h4>Read toggle</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="add">
-        <button title="Add a Book" id="add">
-          <img src="assets/plus-icon.png" alt="add book icon" />
-        </button>
-      </div>
-    </div>
     <script src="javascript.js"></script>
   </body>
 </html>
