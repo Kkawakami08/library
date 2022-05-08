@@ -26,6 +26,7 @@ saveBtn.addEventListener("click", (event) => {
   console.log(myLibrary);
   //add book to page
   bookCard();
+  clearInput();
 });
 
 function bookCard() {
@@ -46,4 +47,10 @@ function bookCard() {
   bookTitle.textContent = titleInput.value;
   bookAuthor.textContent = authorInput.value;
   bookPages.textContent = pageInput.value;
+}
+
+function clearInput() {
+  titleInput.value = "";
+  authorInput.value = "";
+  pageInput.value = "";
 }
