@@ -10,11 +10,19 @@ let myLibrary = [];
 myLibrary.push(permBook);
 console.log(myLibrary);
 
+const addBook = document.getElementsByClassName("addBook")[0];
 const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const pageInput = document.getElementById("pages");
 const saveBtn = document.getElementById("save");
+addBook.appendChild(titleInput);
+addBook.appendChild(authorInput);
+addBook.appendChild(pageInput);
+addBook.appendChild(saveBtn);
+
 const content = document.getElementsByClassName("content")[0];
+
+addBook.style.visibility = "hidden";
 
 saveBtn.addEventListener("click", (event) => {
   //add book to array
@@ -54,3 +62,8 @@ function clearInput() {
   authorInput.value = "";
   pageInput.value = "";
 }
+
+const newBookBtn = document.getElementById("newBook");
+newBookBtn.addEventListener("click", (event) => {
+  addBook.style.visibility = "visible";
+});
