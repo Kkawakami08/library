@@ -8,17 +8,27 @@ const permBook = new Book("The Hobbit", "J.R.R. Tolkien", 295);
 
 let myLibrary = [];
 myLibrary.push(permBook);
+console.log(myLibrary);
 
-function addBook() {
-  let userTitle = prompt("Enter book title");
-  let userAuthor = prompt("Enter book's author");
-  let userPages = prompt("How many pages?");
+// function addBook(e) {
+//   console.log(
+//     `You entered ${titleInput.value} by ${authorInput.value} with ${pageInput.value} pages`
+//   );
+//   const book = new Book(titleInput.value, authorInput.value, pageInput.value);
+//   myLibrary.push(book);
+//   console.log(myLibrary);
+// }
+
+const titleInput = document.getElementById("title");
+const authorInput = document.getElementById("author");
+const pageInput = document.getElementById("pages");
+const saveBtn = document.getElementById("save");
+
+saveBtn.addEventListener("click", (event) => {
   console.log(
-    `You entered ${userTitle} by ${userAuthor} with ${userPages} pages`
+    `You entered ${titleInput.value} by ${authorInput.value} with ${pageInput.value} pages`
   );
-  const book = new Book(userTitle, userAuthor, userPages);
+  const book = new Book(titleInput.value, authorInput.value, pageInput.value);
   myLibrary.push(book);
   console.log(myLibrary);
-}
-
-addBook();
+});
