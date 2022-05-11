@@ -12,13 +12,20 @@ let bookTitle = document.getElementById("title");
 let authorName = document.getElementById("author");
 let pageNumber = document.getElementById("pages");
 let saveBtn = document.getElementById("save");
+let cancelBtn = document.getElementById("cancel");
 saveBtn.addEventListener("click", addToLibrary);
+cancelBtn.addEventListener("click", (event) => {
+  inputContainer.style.visibility = "hidden";
+});
 
 function addToLibrary(e) {
   const newBook = new Book(bookTitle.value, authorName.value, pageNumber.value);
   myLibrary.push(newBook);
   displayBooks();
   inputContainer.style.visibility = "hidden";
+  bookTitle.value = "";
+  authorName.value = "";
+  pageNumber.value = "";
 }
 
 let bookShelf = document.getElementsByClassName("shelf")[0];
@@ -28,15 +35,16 @@ function displayBooks() {
   for (let i = 0; i < myLibrary.length; i++) {
     let bookCover = document.createElement("div");
     bookCover.classList.add("cover");
-    let coverTitle = document.createElement("h1");
-    let coverAuthor = document.createElement("h2");
-    let coverPages = document.createElement("h3");
+    let coverTitle = document.createElement("h2");
+    let coverAuthor = document.createElement("h3");
+    let coverPages = document.createElement("h4");
     let deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete");
 
     bookCover.dataset.number = i;
     console.log(bookCover.dataset.number);
 
-    deleteBtn.textContent = "X";
+    deleteBtn.textContent = "Delete Book";
     coverTitle.textContent = myLibrary[i].title;
     coverAuthor.textContent = myLibrary[i].author;
     coverPages.textContent = myLibrary[i].pages;
