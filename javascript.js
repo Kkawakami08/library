@@ -7,6 +7,7 @@ function Book(title, author, pages) {
   this.pages = pages;
 }
 
+let inputContainer = document.getElementsByClassName("input")[0];
 let bookTitle = document.getElementById("title");
 let authorName = document.getElementById("author");
 let pageNumber = document.getElementById("pages");
@@ -17,6 +18,7 @@ function addToLibrary(e) {
   const newBook = new Book(bookTitle.value, authorName.value, pageNumber.value);
   myLibrary.push(newBook);
   displayBooks();
+  inputContainer.style.visibility = "hidden";
 }
 
 let bookShelf = document.getElementsByClassName("shelf")[0];
@@ -40,4 +42,12 @@ function displayBooks() {
 
     bookShelf.appendChild(bookCover);
   }
+}
+
+let addBtn = document.getElementById("add");
+addBtn.addEventListener("click", displayInput);
+
+function displayInput() {
+  console.log("hello");
+  inputContainer.style.visibility = "visible";
 }
