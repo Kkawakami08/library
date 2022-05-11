@@ -31,7 +31,12 @@ function displayBooks() {
     let coverTitle = document.createElement("h1");
     let coverAuthor = document.createElement("h2");
     let coverPages = document.createElement("h3");
+    let deleteBtn = document.createElement("button");
 
+    bookCover.dataset.number = i;
+    console.log(bookCover.dataset.number);
+
+    deleteBtn.textContent = "X";
     coverTitle.textContent = myLibrary[i].title;
     coverAuthor.textContent = myLibrary[i].author;
     coverPages.textContent = myLibrary[i].pages;
@@ -39,8 +44,14 @@ function displayBooks() {
     bookCover.appendChild(coverTitle);
     bookCover.appendChild(coverAuthor);
     bookCover.appendChild(coverPages);
+    bookCover.appendChild(deleteBtn);
 
     bookShelf.appendChild(bookCover);
+
+    deleteBtn.addEventListener("click", (event) => {
+      bookShelf.removeChild(bookCover);
+      myLibrary.splice(i, 1);
+    });
   }
 }
 
@@ -48,6 +59,5 @@ let addBtn = document.getElementById("add");
 addBtn.addEventListener("click", displayInput);
 
 function displayInput() {
-  console.log("hello");
   inputContainer.style.visibility = "visible";
 }
