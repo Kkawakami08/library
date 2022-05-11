@@ -42,7 +42,9 @@ function displayBooks() {
     deleteBtn.classList.add("delete");
 
     bookCover.dataset.number = i;
-    console.log(bookCover.dataset.number);
+    console.log(
+      `After creating cover, dataset number = ${bookCover.dataset.number}`
+    );
 
     deleteBtn.textContent = "Delete Book";
     coverTitle.textContent = myLibrary[i].title;
@@ -57,8 +59,13 @@ function displayBooks() {
     bookShelf.appendChild(bookCover);
 
     deleteBtn.addEventListener("click", (event) => {
+      console.log(`After deleting ${bookCover.dataset.number}`);
+      console.log(coverTitle);
+
       bookShelf.removeChild(bookCover);
-      myLibrary.splice(i, 1);
+      myLibrary.splice(bookCover.dataset.number, 1);
+      console.log(myLibrary);
+      displayBooks();
     });
   }
 }

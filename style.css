@@ -12,10 +12,18 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .header {
   background-color: var(--light);
   color: var(--black);
   padding: 10px 30px;
+  display: flex;
+  align-items: center;
 }
 
 h1 {
@@ -27,12 +35,17 @@ h2 {
 }
 
 button {
-  background-color: var(--dark);
+  background-color: var(--black);
   border: none;
-  color: var(--white);
+  color: white;
   font-size: 1.5rem;
   padding: 10px 20px;
   border-radius: 10px;
+}
+
+#add {
+  width: 90%;
+  align-self: center;
 }
 
 #save,
@@ -46,6 +59,10 @@ button {
 .delete {
   background-color: var(--highlight);
   color: var(--white);
+}
+
+.delete {
+  padding: 5px 15px;
 }
 
 .buttonContainer {
@@ -64,6 +81,13 @@ button {
   padding: 20px 0px;
 }
 
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0px 20px;
+}
+
 .input {
   visibility: hidden;
   display: flex;
@@ -74,11 +98,17 @@ button {
   background-color: var(--light);
   width: 350px;
   height: 300px;
+  border-radius: 10px;
   position: absolute;
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
   left: 0;
+  right: 0; */
+  margin: auto;
+  left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 input {
